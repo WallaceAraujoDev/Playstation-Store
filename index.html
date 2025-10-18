@@ -3,50 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playstation Store</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css">
-    <title>Playstation Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
+        <!-- Navbar -->
         <div class="navbar">
             <img class="logo" src="./img/logo.png" alt="logo">
             <nav>
                 <ul id="menu-list">
-                    <li><a class="nav-link">Consoles</a></li>
-                    <li><a class="nav-link">Acessórios</a></li>
-                    <li><a class="nav-link">Controles</a></li>
-                    <li><a class="nav-link">Outros</a></li>
+                    <li class="nav-li"><a class="nav-link" href="#">Consoles</a></li>
+                    <li class="nav-li"><a class="nav-link" href="#">Acessórios</a></li>
+                    <li class="nav-li"><a class="nav-link" href="#">Controles</a></li>
+                    <li class="nav-li"><a class="nav-link" href="#">Outros</a></li>
                 </ul>
             </nav>
+            <img src="./img/menu.png" alt="botao-menu" class="menu-icon" onclick="showMenu()">
         </div>
-        <div>
-            <div class="row">
-                <div class="column-1"> 
-                <h2>PS5 Dualschock</h2>
+
+        <!-- Conteúdo principal -->
+        <div class="row">
+            <div class="column-1">
+                <h2>PS5 Dualshock</h2>
                 <h3>Wireless Controller For PlayStation</h3>
                 <p>Controle Original</p>
                 <h4>R$ 400,00</h4>
                 <button class="buy">Comprar Agora</button>
             </div>
-
             <div class="column-2">
-                <img class="controller" src="./img/controller.png" alt="contole">
+                <img class="controller" src="./img/controller.png" alt="controle">
                 <div class="color-box"></div>
                 <button class="add-cart">
-                <img src="./img/add.png" alt="carrinho">
+                    <img src="./img/add.png" alt="carrinho">
                 </button>
             </div>
-        </div>    
-        
-        <div class="social-links">
-            <img src="./img/fb.png">
-            <img src="./img/ig.png">
-            <img src="./img/tw.png">
         </div>
 
+        <!-- Redes sociais -->
+        <div class="social-links">
+            <img src="./img/fb.png" alt="facebook">
+            <img src="./img/ig.png" alt="instagram">
+            <img src="./img/tw.png" alt="twitter">
+        </div>
     </div>
+
+    <script>
+        const menuList = document.getElementById('menu-list');
+        function showMenu() {
+            menuList.classList.toggle('show');
+        }
+    </script>
 </body>
 </html>

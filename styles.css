@@ -13,6 +13,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
     } 
 
     .container {
@@ -68,6 +69,7 @@ body {
 
     .column-1 {
         margin-left: 50px;
+        position: relative;
     }
 
     h2 {
@@ -85,6 +87,17 @@ body {
         font-size: 16px;
         color: #b7b7b7;
         font-weight: 100;
+        margin-top: 10px;
+    }
+
+    .column-1::before {
+        content: "";
+        width: 10px;
+        height: 150px;
+        background: linear-gradient(90deg,rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);;
+        position: absolute;
+        left: -40px;
+        top: 8px;
     }
 
     h4 {
@@ -93,7 +106,7 @@ body {
         margin: 30px 0;
     }
 
-    . buy {
+    .buy {
         width: 140;
         border: none;
         padding: 12px 10px;
@@ -126,4 +139,27 @@ body {
         border-radius: 20px 0 0 20px;
         z-index: 1;
         transform: translateX(150px);
+    }
+
+    .add-cart {
+        z-index: 2;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .add-cart img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .social-links img {
+        height: 20px;
+        margin: 20px;
+        cursor: pointer;
     }

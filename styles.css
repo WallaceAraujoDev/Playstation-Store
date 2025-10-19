@@ -179,6 +179,7 @@ h4 {
 @media (max-width: 760px) {
     .menu-icon {
         display: block;
+        cursor: pointer;
     }
 
     #menu-list {
@@ -194,6 +195,7 @@ h4 {
         flex-direction: column;
         width: 200px;
         padding: 10px;
+        transition: all 0.8s ease-in-out;
     }
 
     #menu-list.show {
@@ -206,13 +208,9 @@ h4 {
         text-align: right;
     }
 
-    .controller,
-    .color-box {
-        display: none;
-    }
-
+    /* Row invertida e centralizada */
     .row {
-        flex-direction: column;
+        flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
         text-align: center;
@@ -220,5 +218,15 @@ h4 {
 
     .column-1 {
         margin-left: 0;
+        margin-bottom: 20px; /* espaço entre as colunas */
+    }
+
+    .column-2 {
+        width: auto;
+    }
+
+    /* Esconder controller e color-box */
+    .controller, .color-box {
+        display: none;
     }
 }

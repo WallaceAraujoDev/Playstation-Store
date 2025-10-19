@@ -135,6 +135,7 @@ h4 {
 .controller {
     width: 90%;
     z-index: 2;
+    animation: moveController 2s infinite alternate ease-in-out;
 }
 
 .color-box {
@@ -230,3 +231,9 @@ h4 {
         display: none;
     }
 }
+
+    @keyframes moveController {
+        from {
+            transform: translate(-5%, -5%) rotate(-5deg);
+        }
+    }
